@@ -1,0 +1,18 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Статья 1",
+      "body": "Чудеса природы",
+      "publish": "true",
+      "author": "Elena Enderson"
+    },
+    {
+      "id": 1,
+      "title": "Статья 1",
+      "body": "Чудеса природы",
+      "publish": "true",
+      "author": "Elena Enderson"
+    }
+  ]
+}
