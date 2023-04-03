@@ -6,12 +6,19 @@ import store from './store'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import vuetify from './plugins/vuetify'
+// import mdiVue from 'mdi-vue/v2'
+// import * as mdijs from '@mdi/js'
+
+
 
 Vue.component('ArticleForm', ArticleForm);
 
 
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios)
+// Vue.use(mdiVue, {
+//   icons: mdijs
+// }) 
 // store.dispatch('fetchArticles');
 
 new Vue({

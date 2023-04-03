@@ -1,40 +1,3 @@
-<!-- <template>
-    <div>
-        <h2 style="font-size: 30px;margin-top: 60px;">Добавить новую статью</h2>
-    <form onsubmit="alert('submit!');return false">
-      <div><input type="text" v-model="article.title" placeholder="Title"></div>
-      <div><input type="text" v-model="article.author" placeholder="Author"></div>
-      <div><textarea v-model="article.body" placeholder="Body"></textarea></div>
-      <div><label><input type="checkbox" v-model="article.publish">Опубликована</label></div>
-      <div ><input type="submit" value="Добавить" 
-        v-on:click.prevent="$emit('addArticle',article)">
-      </div>
-    </form>
-    </div>
-</template>
-
-<script>
-export default {
-    name: "ArticleForm",
-    props: {
-        title: String,
-        body: String,
-        author: String,
-        published: Boolean,
-    },
-    data(){
-        return{
-            article:{
-                title: this.title,
-                body: this.body,
-                author: this.author,
-                published: this.published
-            }
-        }
-    }
-};
-</script> -->
-
 
 <template>
     <div>
@@ -47,7 +10,7 @@ export default {
   
         <v-form>
           <v-row>
-            <v-col cols="12" md="6">
+            <v-col cols="15" md="9">
               <v-text-field
                 v-model="article.title"
                 label="Заголовок"
@@ -99,26 +62,25 @@ export default {
       </v-container>
     </div>
   </template>
-  
-  <script>
-  export default {
+
+<script>
+export default {
     name: "ArticleForm",
     props: {
-      title: String,
-      body: String,
-      author: String,
-      published: Boolean,
+        title: String,
+        body: String,
+        author: String,
+        published: Boolean,
     },
-    data() {
-      return {
-        article: {
-          title: this.title,
-          body: this.body,
-          author: this.author,
-          publish: this.published,
-        },
-      };
-    },
-  };
-  </script>
-  
+    data(){
+        return{
+            article:{
+                title: this.title,
+                body: this.body,
+                author: this.author,
+                published: this.published
+            }
+        }
+    }
+};
+</script>

@@ -2,17 +2,15 @@ import Vue from 'vue'
 // import store from 'vue'
 import VueRouter from 'vue-router'
 import ArticleList from '../components/ArticleList.vue'
-import about_1 from '@/components/about_1'
-// import ArticleForm from '../components/ArticleForm.vue'
-// import Names_articles from '../components/names_articles.vue'
-// import Home_list from '../components/Home_list.vue'
-import HelloWorld from '@/components/HelloWorld'
+
+import ArticleBlock from "../components/ArticleBlock.vue"
+import NewArticle from '../components/NewArticle.vue'
+import about_1 from '../components/about_1.vue'
 
 Vue.use(VueRouter)
 const routes =[
     {
         path: '/',
-        // name: 'Home',
         component: ArticleList
     },
     {
@@ -23,15 +21,15 @@ const routes =[
     {
         path: '/new',
         name: 'Add new article',
-        component: HelloWorld
-    },
+        component: NewArticle
+    }, 
+    {
+        path: '/articles/:id',
+        component: ArticleBlock,
+        props:(route) => ({ id: Number(route.params.id) })
+        
+    } 
     
-    
-    // {
-    //     path: '/articles/:id',
-    //     component: Names_articles,
-    //     props: (route) => store.state.articles.find((x) => x.id == route.params.id)
-    // }
 ]
 
 const router = new VueRouter({

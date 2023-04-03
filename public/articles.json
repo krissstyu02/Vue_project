@@ -2,17 +2,94 @@
   "articles": [
     {
       "id": 1,
-      "title": "Статья 1",
-      "body": "Чудеса природы",
-      "publish": "true",
-      "author": "Elena Enderson"
+      "title": "Title 1",
+      "body": "Learn Vue",
+      "published": true,
+      "author": "Автор 1"
     },
     {
-      "id": 1,
-      "title": "Статья 1",
-      "body": "Чудеса природы",
-      "publish": "true",
-      "author": "Elena Enderson"
+      "id": 2,
+      "title": "Title 2",
+      "body": "texttext",
+      "published": false,
+      "author": "Автор 2"
+    },
+    {
+      "id": 3,
+      "title": "Title 3",
+      "body": "Info about article 3",
+      "published": true,
+      "author": "Автор 3"
+    },
+    {
+      "id": 4,
+      "title": "Title 4",
+      "body": "Learn Vue",
+      "published": true,
+      "author": "Автор 1"
+    },
+    {
+      "title": "Заголовок какой-то",
+      "author": "Автор абабабаб",
+      "body": "проараораоар\nаолаоалоалаоа\nалволвлщыдды",
+      "published": true,
+      "id": 5
+    },
+    {
+      "title": "Заголовок какой-то",
+      "author": "Автор абабабаб",
+      "body": "проараораоар\nаолаоалоалаоа\nалволвлщыдды",
+      "published": true,
+      "id": 6
+    },
+    {
+      "title": "тест 1 ",
+      "author": "не опубл",
+      "body": "аааааа",
+      "published": true,
+      "id": 7
+    },
+    {
+      "title": "New title",
+      "author": "jjjj",
+      "body": "jkjkjk",
+      "published": false,
+      "id": 8
+    },
+    {
+      "title": "New title",
+      "author": "dddd",
+      "body": "eeeeeee",
+      "published": false,
+      "id": 9
+    },
+    {
+      "title": "Лучшая статья человечества ",
+      "author": "я",
+      "body": "Что ещё за скрипт такой\nJavaScript — это язык управления элементами на сайте. Он умеет красить кнопки, запускать анимации, загружать эффекты, и всё это — без перезагрузки страницы. Например, вы нажали кнопку «Нравится» — вспыхнуло красное сердечко. Или навели курсор на три точки, и выпало меню. В обоих случаях на странице сработал скрипт. А JavaScript как раз главный по ним в интернете — отсюда и его название.\n\nJavaScript появился в далёкие девяностые, когда интернет был совсем юным и состоял в основном из текста и гиперссылок. Тогда компания Netscape захотела себе новый язык для веба в дополнение к HTML и CSS.\n\nНа то было две причины:\n\nБлагородная — чтобы люди в браузере могли не только читать текст, но и запускать разные меню, окошки, мигающие кнопки и так далее.\nКоммерческая — чтобы утереть нос Microsoft. В то время между Netscape Navigator и Internet Explorer шла «браузерная война», и Netscape решила привлечь разработчиков к работе в своём браузере с помощью нового языка.",
+      "published": true,
+      "id": 10
+    },
+    {
+      "title": "New title",
+      "author": "",
+      "body": "",
+      "published": true,
+      "id": 11
+    },
+    {
+      "title": "New title",
+      "author": "",
+      "body": "",
+      "published": true,
+      "id": 12
+    },
+    {
+      "title": "New title",
+      "author": "",
+      "body": "",
+      "published": true,
+      "id": 13
     }
   ]
 }

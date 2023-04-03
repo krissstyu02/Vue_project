@@ -1,16 +1,20 @@
 <template>
-    <div v-bind:class="{div_form: !(published)}">
-    <h3  > {{title}} </h3>
-    <div>
-        {{body}}
-    </div>
-    <br>
-    <div> {{upperAuthor}}</div>
-    <br>
-    <div> {{published}}</div>
-    <!-- <input type="checkbox" v-model="published"> -->
-    <button v-on:click.prevent="$emit('state')"> Опубликовать </button>
-    </div>
+    <v-row>
+    <v-col md="7">
+      
+      <v-card class="h-100 nav justify-content-center">
+         
+          <h2 class="card-header">{{ article.title }}</h2>
+          <div class="card-body">
+            <h4 class="card-title">{{  article.author }}</h4>
+            <p class="card-text">{{  article.body}}</p>
+        </div>
+        <!-- </v-img> -->
+      </v-card>
+      
+    </v-col>
+    </v-row>    
+
 </template>
 
 <script>
@@ -18,16 +22,22 @@
 export default {
     name: 'ArticleBlock',
     props: {
-        title: String,
-        body: String,
-        published: Boolean,
-        author: String
+        id: {
+    type:Number,
+      required: true
+    }
+        
     },
-
+    
     computed: {
         upperAuthor(){
             return this.author.toUpperCase();
+        },
+        article() {
+            console.log(`${this.$store.state.articles}`)
+        return this.$store.state.articles.find(article => article.id === Number(this.id))
         }
+        
     },
 
     watch: {
@@ -35,28 +45,13 @@ export default {
         {
             console.log(`${newVal} ${oldVal}`);
         }
-    }
+    },
+    
+    
+
 
 };
 </script>
 
-<style scoped>
-h3{
-  color:grey;
-  font-size: 25px;
-  font-style: normal;
-}
-h5{
-  color:black;
-  font-size: 1em;
-  font-style: normal;
 
-}
-h2{
-  color:black;
-  font-size: 1em;
-  
-}
-
-</style>
 
