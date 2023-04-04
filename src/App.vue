@@ -11,9 +11,6 @@
 
       <v-spacer></v-spacer>
 
-       <!-- <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>  -->
     </v-app-bar>
     
     <v-main app>

@@ -1,21 +1,19 @@
 <template>
     <div class="hello">
-        <div v-if="loading" >
-            <v-progress-circular 
-            color="gray"
-            model-value="20"
-            :size="79"
-            :width="7"
-            indeterminate
-            ></v-progress-circular>
-        </div>
-
+            <v-overlay v-if="loading">
+                <v-progress-circular
+                indeterminate
+                size="64"
+                color="primary"
+                ></v-progress-circular>
+            </v-overlay>
         <ul v-if="!loading">
             <div v-if="articles.length">
                 <v-container>
                     <v-row class="list__cafes-title"> <!-- В это row выводим заголовок компонента -->
                     <v-col>
-                        <h2 class="text-center text-h3 py-3">Лучшие статьи 2023 года</h2>
+                        <h2 class="text-center text-h3 py-3">Лучшие статьи 2023 года </h2>
+                        <h2 class="text-center  py-3">Количество статей= {{articles.length}}</h2>
                     </v-col>
                     </v-row>
                     <v-row>
@@ -24,12 +22,15 @@
                         :key="article.id"
                         
                     >
-                        <v-card height="400" width = 800 
+                        <v-card height="430" width = 800 color="grey lighten-4"
                         
                         >
+                    
                             <v-btn  :to="'/articles/' + article.id " 
                             >{{ article.title }}</v-btn>
-                            <v-card-subtitle >{{article.author}}</v-card-subtitle>
+ 
+
+                            <v-card-subtitle :class="{ 'font-weight-bold': !article.published }" >{{upperAuthor(article)}}</v-card-subtitle>
                             <v-img
                             height="300"
                             src="https://img.freepik.com/premium-vector/news-symbol-logo-design-illustration_337180-790.jpg?w=1380"
@@ -131,15 +132,29 @@ export default{
         }
 
         
-    }
-         
-        
+    },
+    upperAuthor(article) {
+            if (article.author) {
+                return article.author.toUpperCase();
+            } else {
+                return '';
+            }
+        } 
     },
 
-    
     beforeMount()  {
         this.loadArticles();
     }
     };
 </script>
 
+<style scoped>
+.hello{
+    width: 100%;
+}
+.v-overlay__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

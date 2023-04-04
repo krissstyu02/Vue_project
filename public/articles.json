@@ -39,7 +39,7 @@
       "title": "Заголовок какой-то",
       "author": "Автор абабабаб",
       "body": "проараораоар\nаолаоалоалаоа\nалволвлщыдды",
-      "published": true,
+      "published": false,
       "id": 6
     },
     {
@@ -90,6 +90,13 @@
       "body": "",
       "published": true,
       "id": 13
+    },
+    {
+      "title": "New title",
+      "author": "",
+      "body": "",
+      "published": true,
+      "id": 14
     }
   ]
 }

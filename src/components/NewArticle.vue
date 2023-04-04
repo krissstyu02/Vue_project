@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
         <ArticleForm title="New title" body="" author="" published= "" v-on:addArticle="addArticle" />
     </div>
     

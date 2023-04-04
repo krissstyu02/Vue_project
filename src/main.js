@@ -9,7 +9,7 @@ import vuetify from './plugins/vuetify'
 // import mdiVue from 'mdi-vue/v2'
 // import * as mdijs from '@mdi/js'
 
-
+// json-server --port 10000 --delay 1000 --watch articles.json
 
 Vue.component('ArticleForm', ArticleForm);
 
