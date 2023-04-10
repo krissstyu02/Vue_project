@@ -20,9 +20,7 @@
             
             По вопросам сотрудничества или рекламных размещений просим вас обращаться по указанному адресу электронной почты.<br>
         </p>
-        <v-footer color=#546E7A style="height: 70px;">
-      <span class="white--text">&copy; 2023 HotNews</span>
-    </v-footer>
+        
      
       
     </div>

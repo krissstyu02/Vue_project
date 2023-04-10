@@ -1,70 +1,70 @@
+<template>
+  <v-row class="justify-content-center align-items-center h-100">
+    <v-col cols="12" md="8" lg="6">
+      <v-card>
+        <v-img height="500px" src="../assets/girl.jpg" :lazy-src="article.image" aspect-ratio="1"></v-img>
+        <v-card-title class="headline">{{ article.title }}</v-card-title>
+        <v-card-subtitle>{{ article.author }}</v-card-subtitle>
+        <v-card-text>{{ article.body }}</v-card-text>
+        <v-divider></v-divider>
+        <v-card-actions>
+          <v-card-title class="subtitle-1">Информация о статье:</v-card-title>
+          <v-simple-table class="table--style" dense>
+            <template v-slot:default>
+              <tbody>
+                <tr>
+                  <td class="table--header">Тема:</td>
+                  <td>{{ article.title }}</td>
+                </tr>
+                <tr>
+                  <td class="table--header">Автор:</td>
+                  <td>{{ article.author }}</td>
+                </tr>
+                <tr>
+                  <td class="table--header">Дата:</td>
+                  <td>{{ new Date().getFullYear()}}</td>
+                </tr>
+              </tbody>
+            </template>
+          </v-simple-table>
+        </v-card-actions>
+      </v-card>
+    </v-col>
+  </v-row>
+</template>
 
-
- <template>
-    <v-row>
-      <v-col md="7">
-        <v-card class="h-100 nav justify-content-center">
-          <div class="card-body">
-            <v-simple-table>
-              <template v-slot:default>
-                <tbody>
-                  <tr>
-                    <td><b>Заголовок:</b></td>
-                    <td>{{ article.title }}</td>
-                  </tr>
-                  <tr>
-                    <td><b>Автор:</b></td>
-                    <td>{{ article.author }}</td>
-                  </tr>
-                  <tr>
-                    <td><b>Текст статьи:</b></td>
-                    <td>{{ article.body }}</td>
-                  </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
-          </div>
-        </v-card>
-      </v-col>
-    </v-row>    
-  </template>
-  
-  <script>
-  export default {
-    name: 'ArticleBlock',
-    props: {
-      id: {
-        type: Number,
-        required: true
-      }
-    },
-    computed: {
-      article() {
-        return this.$store.state.articles.find(article => article.id === Number(this.id))
-      }
-    },
-    watch: {
-      published(newVal, oldVal) {
-        console.log(`${newVal} ${oldVal}`)
-      }
+<script>
+export default {
+  name: 'ArticleBlock',
+  props: {
+    id: {
+      type: Number,
+      required: true
+    }
+  },
+  computed: {
+    article() {
+      return this.$store.state.articles.find(article => article.id === Number(this.id))
     }
   }
-  </script>
-  
-  <style scoped>
-  .card-header {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-  }
-  .card-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  .card-text {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-  </style>
-  
+}
+</script>
+
+<style scoped>
+.v-card {
+  margin: auto;
+  max-width: 100%;
+  padding: 0;
+}
+.v-img {
+  object-fit: cover;
+}
+.table--style {
+  max-width: 500px;
+  margin: 24px auto;
+}
+.table--header {
+  font-weight: bold;
+  width: 120px;
+}
+</style>

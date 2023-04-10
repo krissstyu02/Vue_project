@@ -4,9 +4,21 @@
     <v-container>
 
       <v-carousel style="width: 1100px">
-        <v-carousel-item v-for="(image, index) in images" :key="index">
-          <v-img :src="image.src" :alt="image.alt"></v-img>
-        </v-carousel-item>
+        <v-carousel-item
+          src="../assets/image1.jpeg"
+          cover
+          ></v-carousel-item>
+          
+        <v-carousel-item
+          src="../assets/image2.jpg"
+          cover
+          ></v-carousel-item>
+          
+        <v-carousel-item
+          src="../assets/image3.jpg"
+          cover
+          ></v-carousel-item>   
+
       </v-carousel>
 
       <v-row>
@@ -116,9 +128,9 @@ export default {
         
       },
       images: [
-      { src:"image1.jpeg", alt: "Image 1" },
-      { src: "image2.jpg", alt: "Image 2" },
-      { src: "image3.jpg", alt: "Image 3" },
+      { src:"/assets/images/image1.jpeg", alt: "Image 1" },
+      { src: "/assets/images/image2.jpg", alt: "Image 2" },
+      { src: "/assets/images/image3.jpg", alt: "Image 3" },
     ],
     dialog: false,
     };

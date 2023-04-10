@@ -13,7 +13,7 @@
                     <v-row class="list__cafes-title"> <!-- В это row выводим заголовок компонента -->
                     <v-col>
                         <h2 class="text-center text-h3 py-3">Лучшие статьи 2023 года </h2>
-                        <h2 class="text-center  py-3">Количество статей= {{articles.length}}</h2>
+                        <!-- <h2 class="text-center  py-3">Количество статей= {{articles.length}}</h2> -->
                     </v-col>
                     </v-row>
                     <v-row>
@@ -149,12 +149,18 @@ export default{
 </script>
 
 <style scoped>
-.hello{
-    width: 100%;
-}
+
 .v-overlay__content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.hello {
+    width: 100%;
+    background-color: #d9dbe6 !important; /* устанавливаем цвет фона */
+    color: #246464 !important; /* устанавливаем цвет текста */
+}
+
 </style>
+
